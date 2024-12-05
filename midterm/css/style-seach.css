@@ -1,0 +1,24 @@
+#img {
+    width: 400px;
+    height: 300px;
+}
+.card {
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+}
+#searchForm {
+    display: flex;
+    justify-content: center;
+}
+.h1 {
+    text-align: center;
+}
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}

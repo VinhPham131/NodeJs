@@ -1,0 +1,87 @@
+<div class="rev-slider">
+	<div class="fullwidthbanner-container">
+					<div class="fullwidthbanner">
+						<div class="bannercontainer" >
+					    <div class="banner" >
+								<ul>
+									<!-- THE FIRST SLIDE -->
+									<li data-transition="boxfade" data-slotamount="20" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+						            <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+													<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('assets/dest/images/thumbs/1.jpg'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
+													</div>
+												</div>
+
+						        </li>
+								<li data-transition="boxfade" data-slotamount="20" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+						          <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+												<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('assets/dest/images/thumbs/1.jpg'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
+											</div>
+											</div>
+
+								<li data-transition="boxfade" data-slotamount="20" class="active-revslide" style="width: 100%; height: 100%; overflow: hidden; z-index: 18; visibility: hidden; opacity: 0;">
+						            <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+													<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('assets/dest/images/thumbs/1.jpg'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
+												</div>
+											</div>
+
+						        </li>
+
+								<li data-transition="boxfade" data-slotamount="20" class="active-revslide current-sr-slide-visible" style="width: 100%; height: 100%; overflow: hidden; visibility: inherit; opacity: 1; z-index: 20;">
+						            <div class="slotholder" style="width:100%;height:100%;" data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
+													<div class="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style="background-color: rgba(0, 0, 0, 0); background-repeat: no-repeat; background-image: url('assets/dest/images/thumbs/1.jpg'); background-size: cover; background-position: center center; width: 100%; height: 100%; opacity: 1; visibility: inherit;">
+												</div>
+											</div>
+
+						        </li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tp-bannertimer"></div>
+					</div>
+				</div>
+				<!--slider-->
+	</div>
+    <div class="container mx-auto px-4">
+        <div id="content" class="mt-8">
+            <div class="main-content">
+                <div class="my-6">&nbsp;</div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="beta-products-list">
+                            <h4 class="text-2xl font-semibold mb-4">New Products</h4>
+                            <div class="beta-products-details mb-6">
+                                <p class="text-gray-600"><%= products.length %> products found</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <% products.forEach(product => { %>
+                                    <div class="single-item bg-white shadow-md rounded-lg overflow-hidden transition-transform transform hover:scale-105">
+                                        <div class="single-item-header">
+                                            <a href="/product/<%= product._id %>">
+                                                <img class="w-full h-48 object-cover" src="<%= product.image %>" alt="<%= product.name %>">
+                                            </a>
+                                        </div>
+                                        <div class="single-item-body p-4">
+                                            <p class="single-item-title text-lg font-medium"><%= product.name %></p>
+                                            <p class="single-item-price text-green-500 font-bold text-lg">
+                                                $<%= product.unit_price %>
+                                            </p>
+                                        </div>
+                                        <div class="single-item-caption flex justify-between items-center p-4">
+                                            <a class="add-to-cart text-gray-500 hover:text-gray-800" href="/cart/add/<%= product._id %>">
+                                                <i class="fa fa-shopping-cart text-xl"></i>
+                                            </a>
+                                            <a class="beta-btn primary bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" href="/product/<%= product._id %>">
+                                                Details <i class="fa fa-chevron-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div> <!-- .beta-products-list -->
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- .main-content -->
+        </div> <!-- #content -->
+    </div> <!-- .container -->
+    
